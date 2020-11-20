@@ -3,12 +3,12 @@
     <link rel="icon" type="png" href="favicon.png">
   <title>Rail King</title>
 <body>
-<form>
-<input type="text" placeholder="Uživatelské jméno" id="user">
+<form name="submit-to-google-sheet">
+<input type="text" placeholder="Uživatelské jméno" id="user" name="user" required>
 <br>
-<input type="email" placeholder="Email" id="mail">
+<input type="email" placeholder="Email" id="mail" name="mail" required>
 <br>
-<input type="password" placeholder="Heslo" id="pass">
+<input type="password" placeholder="Heslo" id="pass" name="pass" required>
 <br>
 <input type="submit" value="Registrovat" class="myButton" onclick="window.location.href = 'https://railking.github.io/';">
 </form>
