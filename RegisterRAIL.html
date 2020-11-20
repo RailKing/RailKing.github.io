@@ -13,6 +13,20 @@
 <input type="submit" value="Registrovat" class="myButton" onclick="window.location.href = 'https://railking.github.io/';">
 </form>
 </body>
+	<script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+<script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+<script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+	<script>
+  const scriptURL = '<https://script.google.com/macros/s/AKfycbwQlMRCjp_EVJC__z5q9epn3fqUmJhlSkazvlAfjR3lIaSk1ZUz/exec>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 <style>
 .myButton {
 	box-shadow: 0px 10px 14px -7px #3e7327;
